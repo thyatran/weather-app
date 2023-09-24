@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <title>Weather App</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="enter city name!" spellcheck="false">
+                <button id="search-weather"><i class='bx bx-search-alt bx-md' ></i></button>
+            </div>
+
+            <div class="error">
+                <p>Invalid city name</p>
+            </div>
+
+            <div class="weather">
+                <img src="icons/rain.png" class="weather-icons">
+
+                <h1 class="temp">22°F</h1>
+                <h2 class="city">San Jose</h2>
+
+                <div class="details">
+                    <div class="col">
+                        <img src="icons/humidity.png">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="icons/wind.png">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
