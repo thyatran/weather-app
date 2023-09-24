@@ -21,7 +21,7 @@ async function checkWeather(city) {
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
+        document.querySelector(".description").innerHTML = data.weather[0].description;
         if(data.weather[0].main == "Clouds") {
             weatherIcon.src = "icons/clouds.png";
         } 
@@ -46,7 +46,13 @@ async function checkWeather(city) {
     }
 }
 
+searchBox.addEventListener("keyup", (event)=> {
+    if (event.key === "Enter") {
+        checkWeather(searchBox.value);
+    }
+});
+
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
-})
+});
             
